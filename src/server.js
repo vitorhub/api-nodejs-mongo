@@ -1,11 +1,11 @@
 const express = require('express')
+const app = express()
 const AuthController = require('./controller/AuthController')
 
-const app = express()
+app.use(express.json()) // para o servidor receber dados via json
 
-app.use('/auth', AuthController)
-// res.send('Hello World');
+app.use('/auth', AuthController) // usa auth primeiro depois a rota authcontroller
 
-app.listen(3001, ()=>{
+app.listen(3001, ()=>{ // escuta porta 3001
     console.log("Server is running");
 })
