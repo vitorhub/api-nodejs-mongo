@@ -11,7 +11,7 @@ mongoose.connect("mongodb+srv://vitorfalcao:oMZ3ZgCOGLKdPNuy@liveapimongo.n4o0wp
         return;
     }
     console.log("Conexão com mongodb estável")
-})
+}) // tres parametros. primeiro o endpoint do banco, depois o objeto vazio, depois a função chamando error
 
 mongoose.Promise = global.Promise; // Configuração que o mongo pede quando trabalha com nodejs
 
